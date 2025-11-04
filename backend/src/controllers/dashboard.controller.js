@@ -41,7 +41,7 @@ const getOverview = async (req, res) => {
 
     res.json({ totalInventoryValue, lowStockCount, topSelling, totalSales });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ "getOverview error": err.message });
   }
 };
 

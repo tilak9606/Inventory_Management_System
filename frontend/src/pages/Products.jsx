@@ -17,7 +17,9 @@ export default function Products() {
 
   const loadProducts = () => api.get("/products").then(res => setProducts(res.data));
 
-  useEffect(() => { loadProducts(); }, []);
+  useEffect(() => { 
+    loadProducts(); 
+  }, []);
 
   const validate = () => {
     const name = form.name.trim();
@@ -191,7 +193,7 @@ export default function Products() {
                   <td className="p-3 text-right">₹{p.cost_price}</td>
                   <td className="p-3 text-right">₹{p.selling_price}</td>
                   <td className="p-3 text-right">₹{Number(p.selling_price - p.cost_price).toFixed(2)}</td>
-                  <td className="p-3 text-right">{Number(p.selling_price ? ((p.selling_price - p.cost_price) / p.selling_price) * 100 : 0).toFixed(1)}%</td>
+                  <td className="p-3 text-right">{Number(p.selling_price ? ((p.selling_price - p.cost_price) / p.selling_price) * 100 : 0).toFixed(2)}%</td>
                   <td className="p-3 text-right">{p.low_stock_threshold ?? 5}</td>
                   <td className="p-3 text-right">
                     <div className="flex flex-wrap gap-2 justify-end">

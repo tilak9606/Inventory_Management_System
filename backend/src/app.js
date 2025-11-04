@@ -9,5 +9,4 @@ import router from "./routes/index.js"
 
 app.use("/api/v1", router);
 
-
 export default app;

@@ -31,16 +31,16 @@ const createSale = async (req, res) => {
 
     res.status(201).json({ sale, product });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ "createSale error": err.message });
   }
 };
 
-const listSales = async (_req, res) => {
+const listSales = async (req, res) => {
   try {
     const sales = await Sale.find().populate("product").sort({ createdAt: -1 });
     res.json(sales);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ "listSales error": err.message });
   }
 };
 
