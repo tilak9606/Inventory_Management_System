@@ -39,16 +39,16 @@ npm install
 VITE_API_URL=http://localhost:5173/api/v1
 
 ### backend .env
-PORT=8000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.0ox33hr.mongodb.net/IMS
+PORT=8000 
+MONGO_URI=mongodb+srv://username:password@cluster0.0ox33hr.mongodb.net/IMS
 
 ### Backend Connection
-Method	Endpoint	             Description
-GET	    /api/products	         Fetch all products
-POST	/api/products	         Add new product
-DELETE	/api/products/:id	     Delete a product
+Method	Endpoint	               Description
+GET	    /api/products	           Fetch all products
+POST	  /api/products	           Add new product
+DELETE	/api/products/:id	       Delete a product
 GET	    /api/dashboard/overview	 Fetch dashboard summary
-POST	/api/sales	             Record a new sale
+POST	  /api/sales	             Record a new sale
 
 ### run in both frontend and backend seperately
 npm run dev
